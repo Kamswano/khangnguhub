@@ -1,5 +1,3 @@
--- Rebrand pass: visible literal titles/folder labels changed to Khang Ngu Hub.
--- External UI library/logo assets loaded remotely may still show their own branding.
 if getgenv().__BF_LOADED or getgenv().__BF_INITIALIZING then
     warn("[BF] Already loaded; rejoin before running again")
     return
@@ -400,7 +398,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 local A =
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/zzzz.lua"))()
-Main = A.CreateMain({ Title = "Blox Fruit", Desc = " - Blox Fruit" })
+Main = A.CreateMain({ Title = "Khang Ngu Hub", Desc = " - Blox Fruit" })
 PageShop = Main.CreatePage({ Page_Name = "Shop", Page_Title = "Shop" })
 getgenv().Options = A.Options
 SectionShopMisc = PageShop.CreateSection("Misc Shop")
