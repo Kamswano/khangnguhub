@@ -11,6 +11,7 @@ end
 -- optional notification initialization, HTTP response handling, and team selection.
 -- Verified with syntax parsing and mocked regression tests; NOT live executor-tested.
 -- V4: restore missing sword selector; guard spawn lookup and optional APIs/modules; isolate recurring jobs.
+-- V3: khang ngu vai l
 -- External UI dependency is obfuscated; game remotes and maps still require live validation.
 -- Compatibility fixes and throttled diagnostics. Requires a Roblox Luau executor.
 local BFNativePcall = pcall
