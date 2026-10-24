@@ -1,3 +1,5 @@
+-- Rebrand pass: visible literal titles/folder labels changed to Khang Ngu Hub.
+-- External UI library/logo assets loaded remotely may still show their own branding.
 if getgenv().__BF_LOADED or getgenv().__BF_INITIALIZING then
     warn("[BF] Already loaded; rejoin before running again")
     return
@@ -87,9 +89,7 @@ function BF.startQuest(name, id, position, stillActive)
     if type(name) ~= "string" or name == "" or id == nil or position == nil then return false end
     if BF.questBusy or os.clock() < (BF.questNext or 0) then return false end
     local player = game:GetService("Players").LocalPlayer
-    local character = player and player.Character
-    local root = character and character:FindFirstChild("HumanoidRootPart")
-    if not root then return false end
+    local root = player.Character:FindFirstChild("HumanoidRootPart")
     local pos = typeof(position) == "CFrame" and position.Position or position
     if (pos - root.Position).Magnitude > 8 then
         toTarget(CFrame.new(pos) * CFrame.new(0, 4, 2), true)
@@ -400,7 +400,7 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
 end)
 local A =
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/refs/heads/main/zzzz.lua"))()
-Main = A.CreateMain({ Title = "Khang Ngu Hub", Desc = " - Blox Fruit" })
+Main = A.CreateMain({ Title = "Blox Fruit", Desc = " - Blox Fruit" })
 PageShop = Main.CreatePage({ Page_Name = "Shop", Page_Title = "Shop" })
 getgenv().Options = A.Options
 SectionShopMisc = PageShop.CreateSection("Misc Shop")
